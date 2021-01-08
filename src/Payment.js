@@ -12,7 +12,7 @@ function Payment() {
 
     const[{basket,user}, dispatch] = useStateValue();
     const history = useHistory();
-    
+
     const stripe = useStripe();
     const elements = useElements();
 
@@ -20,7 +20,7 @@ function Payment() {
     const {disabled,setDisabled} = useState(true);
 
     const{succeeded,setSucceeded} = useState(false);
-    const{processing,setProcessing} = useState("");
+    const{processing,setProcessing} = useState(true);
     const{clientSecret,setClientSecret} = useState(true);
 
     useEffect(() => {
